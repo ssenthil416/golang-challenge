@@ -39,7 +39,8 @@ func checkGet(t *testing.T, data DumbDictionary) {
  */
 func checkDelete(t *testing.T, data DumbDictionary) {
 	assert.NotNil(t, data)
-	result, err := data.Delete("Mike Tyson")
+	_, err := data.Delete("Mike Tyson")
 	assert.Nil(t, err)
-	assert.Contains(t, result, "succesfully")
+	_, err = data.Get("Mike Tyson")
+	assert.NotNil(t, err)
 }
