@@ -13,7 +13,7 @@ type DumbEntry struct {
 	Length int32
 }
 
-// DumbList it's a list of dumb entries
+// DumbList is a list of very dumb entries
 type DumbList struct {
 	List []DumbEntry
 }
